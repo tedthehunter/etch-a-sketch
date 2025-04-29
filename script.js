@@ -24,11 +24,12 @@ const generatePixel = (id, sideLength) => {
     });
 }
 
-//DECLARE function that creates new grid, with side length param
-//for loop from 0 to side length squared
-//generate pixels up to that amount, with side length arg
+const newGrid = (sideLength) => {
+    for (let i = 0; i < sideLength ** 2; i++) {
+        generatePixel(i+1, sideLength);
+    }
+}
 
-
-for (let i = 0; i < 256; i++) {
-    generatePixel(i+1);
+for (let i = 0; i < 16 ** 2; i++) {
+    generatePixel(i+1, 16);
 }
