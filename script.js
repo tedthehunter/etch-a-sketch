@@ -7,4 +7,7 @@ const generatePixel = () => {
 }
 
 generatePixel();
-//write for loop to call creation function 16x16 times
+
+for (let i = 0; i < 256; i++) {
+    generatePixel();
+}
