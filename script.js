@@ -29,8 +29,14 @@ const generatePixel = (id, sideLength) => {
     });
 }
 
-//define opacity change function
-    //
+//define opacity change function - node parameter
+    //store node opacity in variable
+    //return node opacity += 0.1
+
+const incrementOpacity = (target) => {
+    const currentOpacity = target.style.opacity;
+    return currentOpacity += 0.1;
+}
 
 const randomizeColor = () => {
     let red = Math.floor(Math.random() * 256);
@@ -42,7 +48,7 @@ const randomizeColor = () => {
 
 const testing = document.querySelector('#test');
 testing.addEventListener('click', () => {
-    testing.style.backgroundColor = randomizeColor();
+    testing.opacity = '1';
 });
 
 const newGrid = (sideLength) => {
