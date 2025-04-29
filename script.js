@@ -8,14 +8,15 @@ newGridButton.addEventListener('click', () => {
         //call generation function with input num as side length
 });
 
-const generatePixel = (id) => {
+const generatePixel = (id, sideLength) => {
     const pixel = document.createElement('div');
     pixel.classList.add('pixel');
     pixel.id = id;
 
-    //add optional sideLength param
-    //if sideLength exists
-        //change height/width to 100/sideLength
+    if (sideLength) {
+        pixel.style.height = `${100 / sideLength}%`;
+        pixel.style.width = `${100 / sideLength}%`;
+    }
 
     gridContainer.appendChild(pixel);
     pixel.addEventListener('mouseover', () => {
