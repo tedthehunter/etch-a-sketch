@@ -1,13 +1,13 @@
 const gridContainer = document.querySelector('#gridContainer');
 
-const generatePixel = () => {
+const generatePixel = (id) => {
     const pixel = document.createElement('div');
     pixel.classList.add('pixel');
+    pixel.id = id;
     gridContainer.appendChild(pixel);
 }
 
-generatePixel();
-
 for (let i = 0; i < 256; i++) {
-    generatePixel();
+    generatePixel(i+1);
+    console.log(i);
 }

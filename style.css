@@ -2,6 +2,13 @@
     background-color: black;
     height: 20px;
     width: 20px;
+    flex-shrink: 0;
 }
 
-/* write id selector style for flexbox container */
+#gridContainer {
+    display: flex;
+    gap: 1px;
+    flex-wrap: wrap;
+    width: 320px;
+    height: 320px;
+}
