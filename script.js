@@ -2,10 +2,15 @@ const gridContainer = document.querySelector('#gridContainer');
 const newGridButton = document.querySelector('#newGridButton');
 
 newGridButton.addEventListener('click', () => {
-    //anonymous function
-    //prompt user for input number
-        //from 1-100
-        //call generation function with input num as side length
+    const sideLength = Number(prompt('Enter the length of one side of your drawing grid.', '16'));
+    if (sideLength >= 1 && sideLength <= 100) {
+        newGrid(sideLength);
+    }
+    else {
+        alert('Please enter only whole numbers from 1-100.')
+        newGrid(16);
+    }
+
 });
 
 const generatePixel = (id, sideLength) => {
@@ -25,11 +30,13 @@ const generatePixel = (id, sideLength) => {
 }
 
 const newGrid = (sideLength) => {
+    const pixels = document.querySelectorAll('.pixel');
+    pixels.forEach((pixel) => {
+        pixel.remove();
+    });
     for (let i = 0; i < sideLength ** 2; i++) {
         generatePixel(i+1, sideLength);
     }
 }
 
-for (let i = 0; i < 16 ** 2; i++) {
-    generatePixel(i+1, 16);
-}
+newGrid(16);
