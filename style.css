@@ -7,8 +7,8 @@
 #gridContainer {
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
-    height: 400px;
+    width: 840px;
+    height: 840px;
     border-style: solid;
     border-width: 2px;
 }
