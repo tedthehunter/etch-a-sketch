@@ -34,11 +34,14 @@ const generatePixel = (id, sideLength) => {
 //define opacity change function
     //
 
-//define color change function
-    //store red variable - random 0 - 255
-    //store green variable - random 0 - 255
-    //store blue variable - random 0 - 255
-    //return string rgb(red, green, blue)
+const randomizeColor = () => {
+    let red = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
+
+    return `rgb(${red},${green},${blue})`;
+}
+
 
 const newGrid = (sideLength) => {
     const pixels = document.querySelectorAll('.pixel');
