@@ -7,7 +7,6 @@
 
 #gridContainer {
     display: flex;
-    gap: 1px;
     flex-wrap: wrap;
     width: 320px;
     height: 320px;
