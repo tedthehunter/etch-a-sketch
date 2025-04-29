@@ -24,10 +24,21 @@ const generatePixel = (id, sideLength) => {
     }
 
     gridContainer.appendChild(pixel);
-    pixel.addEventListener('mouseover', () => {
-        pixel.style.backgroundColor = 'black';
+    pixel.addEventListener('mouseover', (event) => {
+        //call color change function
+        //call opacity change function
+        event.target.style.opacity += 0.1;
     });
 }
+
+//define opacity change function
+    //
+
+//define color change function
+    //store red variable - random 0 - 255
+    //store green variable - random 0 - 255
+    //store blue variable - random 0 - 255
+    //return string rgb(red, green, blue)
 
 const newGrid = (sideLength) => {
     const pixels = document.querySelectorAll('.pixel');
