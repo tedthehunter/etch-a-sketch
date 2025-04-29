@@ -24,10 +24,8 @@ const generatePixel = (id, sideLength) => {
     }
 
     gridContainer.appendChild(pixel);
-    pixel.addEventListener('mouseover', (event) => {
-        //call color change function
-        //call opacity change function
-        event.target.style.opacity += 0.1;
+    pixel.addEventListener('mouseover', () => {
+        pixel.style.backgroundColor = randomizeColor();
     });
 }
 
@@ -42,6 +40,10 @@ const randomizeColor = () => {
     return `rgb(${red},${green},${blue})`;
 }
 
+const testing = document.querySelector('#test');
+testing.addEventListener('click', () => {
+    testing.style.backgroundColor = randomizeColor();
+});
 
 const newGrid = (sideLength) => {
     const pixels = document.querySelectorAll('.pixel');

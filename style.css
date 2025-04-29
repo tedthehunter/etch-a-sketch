@@ -2,8 +2,7 @@
     height: 6.25%;
     width: 6.25%;
     flex-shrink: 0;
-    opacity: 0;
-    background-color: black;
+    opacity: 0.0;
 }
 
 #gridContainer {
