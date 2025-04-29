@@ -5,6 +5,9 @@ const generatePixel = (id) => {
     pixel.classList.add('pixel');
     pixel.id = id;
     gridContainer.appendChild(pixel);
+    pixel.addEventListener('mouseover', () => {
+        pixel.style.backgroundColor = 'black';
+    });
 }
 
 for (let i = 0; i < 256; i++) {
