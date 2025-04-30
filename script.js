@@ -46,6 +46,10 @@ const testIncrementOpacity = (element) => {
     element.style.opacity -= '-0.1';
 }
 
+testing.addEventListener('click', (event) => {
+    testIncrementOpacity(event.target);
+});
+
 const newGrid = (sideLength) => {
     const pixels = document.querySelectorAll('.pixel');
     pixels.forEach((pixel) => {
