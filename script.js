@@ -47,9 +47,9 @@ const randomizeColor = () => {
 }
 
 const testing = document.querySelector('#test');
-testing.addEventListener('click', () => {
-    testing.opacity = '1';
-});
+const testIncrementOpacity = () => {
+    testing.style.opacity -= '-0.1';
+}
 
 const newGrid = (sideLength) => {
     const pixels = document.querySelectorAll('.pixel');
