@@ -33,11 +33,6 @@ const generatePixel = (id, sideLength) => {
     //store node opacity in variable
     //return node opacity += 0.1
 
-const incrementOpacity = (target) => {
-    const currentOpacity = target.style.opacity;
-    return currentOpacity += 0.1;
-}
-
 const randomizeColor = () => {
     let red = Math.floor(Math.random() * 256);
     let green = Math.floor(Math.random() * 256);
@@ -47,8 +42,8 @@ const randomizeColor = () => {
 }
 
 const testing = document.querySelector('#test');
-const testIncrementOpacity = () => {
-    testing.style.opacity -= '-0.1';
+const testIncrementOpacity = (element) => {
+    element.style.opacity -= '-0.1';
 }
 
 const newGrid = (sideLength) => {
